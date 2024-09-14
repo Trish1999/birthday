@@ -1,0 +1,119 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #040404;
+    font-family: 'Arial', sans-serif;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.message {
+    font-size: 4rem;
+    color: #f8fcfc;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.wish {
+    font-size: 2rem;
+    color: #f4f1f1;
+    margin-top: 10px;
+    animation: fadeIn 2s forwards;
+    opacity: 0;
+}
+
+.ballons img {
+    animation: ballons 5s linear infinite;
+}
+
+.ballons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -600px;
+    width: 100vw;
+}
+
+@keyframes ballons {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        filter: brightness(150%);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-95vh);
+        opacity: 0;
+    }
+}
+
+.ballons img:nth-child(1) {
+    animation-delay: 1s;
+    width: 100px;
+}
+
+.ballons img:nth-child(2) {
+    animation-delay: 6s;
+    width: 120px;
+}
+
+.ballons img:nth-child(3) {
+    animation-delay: 9s;
+    width: 150px;
+}
+
+.ballons img:nth-child(4) {
+    animation-delay: 5s;
+    width: 130px;
+}
+
+.ballons img:nth-child(5) {
+    animation-delay: 4s;
+    width: 100px;
+}
+
+.ballons img:nth-child(6) {
+    animation-delay: 10s;
+    width: 150px;
+}
+
+.ballons img:nth-child(7) {
+    animation-delay: 3s;
+    width: 100px;
+}
+
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #ffa600, 0 0 30px #ffa600, 0 0 40px #ffa600;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
